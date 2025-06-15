@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poki Clone - Play Free Online Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
+  nav ul.show {
+    display: flex;
+  }
+}
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #121212;
+      color: #fff;
+    }
+    header {
+      background: #1e1e1e;
+      padding: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin-top: 10px;
+    }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #00d4ff;
+    }
+    .search-bar {
+      margin-top: 20px;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #222;
+      color: #fff;
+    }
+    main h2 {
+      font-size: 1.8rem;
+      margin: 30px 0 20px;
+    }
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .game-card {
+      background: #1c1c1c;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      animation: fadeInUp 0.5s ease forwards;
+      opacity: 0;
+    }
+    .game-card:nth-child(odd) {
+      animation-delay: 0.1s;
+    }
+    .game-card:nth-child(even) {
+      animation-delay: 0.2s;
+    }
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    }
+    .game-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+    }
+    .game-card span {
+      display: block;
+      text-align: center;
+      padding: 12px;
+      font-size: 1rem;
+      color: #fff;
+    }
+    .features {
+      background: #1e1e1e;
+      margin: 40px 0;
+      padding: 30px;
+      border-radius: 10px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .features h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    .features ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+    .features ul li {
+      margin-bottom: 8px;
+    }
+    .categories-section {
+      background: #1e1e1e;
+      padding: 40px 30px;
+      border-radius: 10px;
+      margin-top: 40px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    .categories-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #00d4ff;
+    }
+    .category-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .category-tags a {
+      background: #333;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      transform: translateY(0);
+    }
+    .category-tags a:hover {
+      background: #00d4ff;
+      color: #000;
+      transform: translateY(-3px);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e1e1e;
+      margin-top: 40px;
+    }
+    footer p {
+      color: #aaa;
+    }
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>PipeYellow Games</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="popular.html">Popular</a></li>
+          <li><a href="new.html">New</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search games...">
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <h2>New Games</h2>
+    <div class="game-grid">
+      <a href="games/game1.html" class="game-card">
+        <img src="/images/images1.jpg" alt="Game 1">
+        <span>NSR Street Car Racing</span>
+      </a>
+      
+    
+      
+      <a href="games/game5.html" class="game-card">
+        <img src="/images/images5.jpg" alt="Game 5">
+        <span>Feed me Monsters! Idle Battle </span>
+      </a>
+     
+      <a href="games/game7.html" class="game-card">
+        <img src="/images/images7.jpg" alt="Game 7">
+        <span>FRAGEN</span>
+      </a>
+     
+      <a href="games/game9.html" class="game-card">
+        <img src="/images/images9.jpg" alt="Game 9">
+        <span>Real Motorbike Simulator Race 3D</span>
+      </a>
+     
+    </div>
+
+    <section class="features">
+      <h3>Extra Features</h3>
+      <ul>
+        <li>🎮 Gamepad & Keyboard compatible gameplay</li>
+        <li>🔍 Live search to find games quickly</li>
+        <li>⚡ Fast-loading and mobile-friendly layout</li>
+        <li>📁 Clean code and folder structure</li>
+        <li>🌓 Dark mode by default for immersive gaming</li>
+      </ul>
+    </section>
+
+    <section class="categories-section">
+      <h3>Explore Categories</h3>
+      <div class="category-tags">
+       <a href="/categories/actions.html">🎯 Action</a>
+      
+        <a href="/categories/racing.html">🚗 Racing</a>
+        
+        <a href="/categories/shooting.html">🏹 Shooting</a>
+        <a href="/categories/adventure.html">🎮 Adventure</a>
+        
+        <a href="/categories/sports.html">⚽ Sports</a>
+        <a href="/categories/fantacy.html">🧙‍♂️ Fantasy</a>
+       
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 PipeYellowGames. All rights reserved.</p>
+  </footer>
+  <script>
+    const searchInput = document.querySelector('input[type="text"]');
+    const cards = document.querySelectorAll('.game-card');
+  
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        const title = card.querySelector('span').textContent.toLowerCase();
+        card.style.display = title.includes(query) ? 'block' : 'none';
+      });
+    });
+  </script>
+  
+</body>
+</html>

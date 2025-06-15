@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Categories - Poki Clone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #121212;
+      color: #fff;
+    }
+    header {
+      background: #1e1e1e;
+      padding: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin-top: 10px;
+    }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #00d4ff;
+    }
+    .category-section {
+      margin-top: 50px;
+      background: #1e1e1e;
+      padding: 40px;
+      border-radius: 10px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .category-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      color: #00d4ff;
+    }
+    .category-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .category-tags a {
+      background: #333;
+      padding: 12px 24px;
+      border-radius: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .category-tags a:hover {
+      background: #00d4ff;
+      color: #000;
+      transform: translateY(-3px);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e1e1e;
+      margin-top: 50px;
+    }
+    footer p {
+      color: #aaa;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>PipeYellow Games</h1>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="popular.html">Popular</a></li>
+          <li><a href="new.html">New</a></li>
+          <li><a href="categories.html" style="color:#00d4ff">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="category-section">
+      <h2>Explore Game Categories</h2>
+      <div class="category-tags">
+        <a href="/categories/actions.html">🎯 Action</a>
+        
+        <a href="/categories/racing.html">🚗 Racing</a>
+        
+        <a href="/categories/shooting.html">🏹 Shooting</a>
+        <a href="/categories/adventure.html">🎮 Adventure</a>
+        
+        <a href="/categories/sports.html">⚽ Sports</a>
+        <a href="/categories/fantacy.html">🧙‍♂️ Fantasy</a>
+       
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PipeYellowGames. All rights reserved.</p>
+  </footer>
+</body>
+</html>

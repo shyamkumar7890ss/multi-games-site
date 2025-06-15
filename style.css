@@ -1,0 +1,117 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background: #121212;
+  color: #fff;
+}
+
+/* Header Styling */
+header {
+  background: #1e1e1e;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(90deg, #00d4ff, #00ffa1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+header h1:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation */
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  position: relative;
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #00d4ff;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #00d4ff;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Search Bar */
+.search-bar {
+  margin-top: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #222;
+  color: #fff;
+}
+
+/* Responsive Nav Toggle - Optional */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
